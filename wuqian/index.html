@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴签-华语乐坛资深创作人与影视制作人</title>
+    <meta name="description" content="吴签官方网站，详细介绍华语乐坛资深创作人、影视制作人的艺术成就、代表作品、音乐风格及个人经历，提供作品鉴赏与最新动态。">
+    <meta name="keywords" content="吴签,华语乐坛,创作人,影视制作人,音乐专辑,影视作品">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #c4a47c;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/musicstudio/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b08d66;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(196, 164, 124, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 1rem auto 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--light-text);
+            text-align: justify;
+        }
+
+        /* Music Section */
+        .music-section {
+            background-color: var(--white);
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .music-card {
+            background: var(--bg-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .music-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .music-thumb {
+            height: 200px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .music-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .music-card:hover .music-thumb img {
+            transform: scale(1.05);
+        }
+
+        .music-info {
+            padding: 1.5rem;
+        }
+
+        .music-info h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .music-info p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            background-color: #eee;
+            color: #666;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        /* Film Section */
+        .film-section {
+            background-color: #f4f4f4;
+        }
+
+        .film-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .film-item {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .film-meta {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .film-meta h4 {
+            font-size: 1.2rem;
+        }
+
+        .film-meta span {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .film-desc {
+            padding: 1.5rem;
+            color: var(--light-text);
+        }
+
+        /* Stats */
+        .stats-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h5 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .film-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">WU<span>QIAN</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#music">音乐作品</a></li>
+                    <li><a href="#film">影视作品</a></li>
+                    <li><a href="#news">动态</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>音乐与影像的跨界融合</h1>
+                <p>探索华语乐坛资深创作人、影视制作人吴签的艺术世界。从流行金曲到电影配乐，用声音讲述故事，用画面传递情感。</p>
+                <div class="hero-btns">
+                    <a href="#music" class="btn">聆听作品</a>
+                    <a href="#about" class="btn btn-outline">了解艺人</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section container">
+            <div class="section-title">艺人简介</div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/artistportrait/600/700" alt="吴签肖像">
+                </div>
+                <div class="about-text">
+                    <h3>华语乐坛资深创作人</h3>
+                    <p>吴签，华语乐坛极具影响力的创作人及影视制作人。自出道以来，凭借独特的音乐风格和敏锐的时尚触觉，在音乐与影视领域均取得了卓越成就。其作品融合了流行、R&B与电子元素，深受广大听众喜爱。</p>
+                    <p>除了在音乐创作上的深耕，吴签也积极投身于影视制作行业。他参与策划并制作了多部热门影视作品，致力于为观众呈现高质量的视听盛宴。作为行业的先行者，他始终保持着对艺术的敬畏之心和对创新的追求。</p>
+                    <p>他的创作理念是“打破常规，重塑经典”，不断挑战自我，探索音乐与影像结合的无限可能。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>20+</h3>
+                    <p>发行专辑</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>原创单曲</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>影视制作项目</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10亿+</h3>
+                    <p>全网播放量</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="section music-section">
+            <div class="container">
+                <div class="section-title">精选音乐</div>
+                <div class="music-grid">
+                    <article class="music-card">
+                        <div class="music-thumb">
+                            <img src="https://picsum.photos/seed/album1/400/300" alt="专辑封面">
+                        </div>
+                        <div class="music-info">
+                            <h4>《时光的回响》</h4>
+                            <p>最新录音室专辑，收录了十首深度情感单曲，展现细腻的内心世界。</p>
+                            <span class="tag">流行</span>
+                            <span class="tag">R&B</span>
+                        </div>
+                    </article>
+                    <article class="music-card">
+                        <div class="music-thumb">
+                            <img src="https://picsum.photos/seed/album2/400/300" alt="专辑封面">
+                        </div>
+                        <div class="music-info">
+                            <h4>《城市霓虹》</h4>
+                            <p>电子风格单曲，描绘现代都市的繁华与孤独，节奏感强烈。</p>
+                            <span class="tag">电子</span>
+                            <span class="tag">都市</span>
+                        </div>
+                    </article>
+                    <article class="music-card">
+                        <div class="music-thumb">
+                            <img src="https://picsum.photos/seed/album3/400/300" alt="专辑封面">
+                        </div>
+                        <div class="music-info">
+                            <h4>《夏日微风》</h4>
+                            <p>轻快治愈的民谣风格，适合在悠闲的午后静静聆听。</p>
+                            <span class="tag">民谣</span>
+                            <span class="tag">轻音乐</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Film Section -->
+        <section id="film" class="section film-section">
+            <div class="container">
+                <div class="section-title">影视制作</div>
+                <div class="film-list">
+                    <article class="film-item">
+                        <div class="film-meta">
+                            <h4>《光影之间》</h4>
+                            <span>2023 / 纪录片</span>
+                        </div>
+                        <div class="film-desc">
+                            吴签参与策划并制作的纪录片，深入探讨了独立音乐人的生存现状与创作历程，获得了业内外的一致好评。
+                        </div>
+                    </article>
+                    <article class="film-item">
+                        <div class="film-meta">
+                            <h4>《声浪》</h4>
+                            <span>2022 / 剧情长片</span>
+                        </div>
+                        <div class="film-desc">
+                            由吴签担任监制及音乐总监的电影，讲述了两个音乐人在追逐梦想过程中相互扶持与碰撞的故事。
+                        </div>
+                    </article>
+                    <article class="film-item">
+                        <div class="film-meta">
+                            <h4>《声音的边界》</h4>
+                            <span>2021 / 专题片</span>
+                        </div>
+                        <div class="film-desc">
+                            吴签主导制作的系列专题片，通过独特的视角分析不同风格音乐背后的文化内涵。
+                        </div>
+                    </article>
+                    <article class="film-item">
+                        <div class="film-meta">
+                            <h4>《潮汐》</h4>
+                            <span>2020 / 影视原声带</span>
+                        </div>
+                        <div class="film-desc">
+                            为热门网络剧定制的原声带，多首OST在各大音乐平台霸榜，展现了吴签在影视配乐领域的实力。
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section container">
+            <div class="section-title">最新动态</div>
+            <div class="music-grid">
+                <article class="music-card">
+                    <div class="music-info">
+                        <span class="tag" style="background-color: #e3f2fd; color: #1565c0;">通告</span>
+                        <h4 style="margin-top: 0.5rem;">2023年度全球巡回演唱会计划公布</h4>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">吴签宣布将于今年夏季开启“时光之旅”世界巡回演唱会，首站定于上海...</p>
+                    </div>
+                </article>
+                <article class="music-card">
+                    <div class="music-info">
+                        <span class="tag" style="background-color: #e8f5e9; color: #2e7d32;">奖项</span>
+                        <h4 style="margin-top: 0.5rem;">荣获第35届金曲奖最佳制作人提名</h4>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">凭借新专辑的制作，吴签成功入围年度最佳制作人奖项，竞争激烈...</p>
+                    </div>
+                </article>
+                <article class="music-card">
+                    <div class="music-info">
+                        <span class="tag" style="background-color: #fff3e0; color: #ef6c00;">合作</span>
+                        <h4 style="margin-top: 0.5rem;">与知名时尚杂志合作推出限量版封面</h4>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">吴签将作为封面人物亮相《VOGUE》五月刊，探讨艺术与时尚的融合...</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h5>WU QIAN</h5>
+                    <p>华语乐坛创作人、影视制作人</p>
+                    <p>致力于用艺术连接世界。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速链接</h5>
+                    <ul>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#music">音乐作品</a></li>
+                        <li><a href="#film">影视作品</a></li>
+                        <li><a href="#news">新闻中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>联系方式</h5>
+                    <ul>
+                        <li>官方邮箱: contact@wuqian.com</li>
+                        <li>商务合作: business@wuqian.com</li>
+                        <li>版权所有 © 2023 吴签工作室</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>本网站为模拟演示页面，不涉及真实人物或商业活动。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+              </html>
