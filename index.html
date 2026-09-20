@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="虐文女配不想死(穿书) - 专为穿书虐文爱好者打造的沉浸式阅读平台，收录经典虐文女配逆袭、洗白、保命攻略指南，提供高质量小说推荐与阅读体验。">
+    <meta name="keywords" content="虐文女配不想死(穿书), 穿书小说, 虐文推荐, 女配逆袭, 小说阅读">
+    <title>虐文女配不想死(穿书) - 穿书虐文推荐与逆袭阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --primary-dark: #6c3483;
+            --accent-color: #e74c3c;
+            --bg-color: #fdf6f6;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-sub: #7f8c8d;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-left: 15px;
+            border-left: 5px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: normal;
+            margin-left: 15px;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--card-bg);
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-list {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .filter-item {
+            padding: 8px 16px;
+            background: #f5f5f5;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+            color: var(--text-sub);
+        }
+
+        .filter-item.active, .filter-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Book Grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .book-info {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .book-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .book-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .book-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .book-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .author {
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .read-btn {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .read-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: #fff;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .guide-card {
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .guide-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .guide-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .guide-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #f8f8f8;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-info p {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links h5 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .book-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+            .book-cover {
+                height: 220px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <div class="logo-icon">虐</div>
+                虐文女配不想死
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">完结专区</a></li>
+                    <li><a href="#">作者专区</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>登录 / 注册</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>虐文女配不想死(穿书)</h1>
+            <p>打破宿命，拒绝悲剧。在这里，你可以找到那些让女主从必死结局中逆天改命、绝地求生的精彩故事。</p>
+            <div class="hero-tags">
+                <span class="tag">#虐文女配</span>
+                <span class="tag">#穿书攻略</span>
+                <span class="tag">#逆天改命</span>
+                <span class="tag">#高甜救赎</span>
+                <span class="tag">#系统流</span>
+            </div>
+            <a href="#recommend" class="hero-btn">开始阅读</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filter Section -->
+        <div class="filter-bar">
+            <div class="filter-list">
+                <div class="filter-item active">全部</div>
+                <div class="filter-item">必死结局</div>
+                <div class="filter-item">系统救场</div>
+                <div class="filter-item">黑化男主</div>
+                <div class="filter-item">甜宠救赎</div>
+                <div class="filter-item">沙雕轻松</div>
+                <div class="filter-item">BE美学</div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main id="recommend">
+            <div class="section-title">
+                精选推荐
+                <span>为您精选高分虐文女配逆袭佳作</span>
+            </div>
+
+            <div class="book-grid">
+                <!-- Book 1 -->
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/book1/240/320" alt="小说封面" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="book-title">穿成反派女配后我只想苟命</h3>
+                        <div class="book-meta">
+                            <span>作者：云深不知处</span>
+                            <span>24.5万字</span>
+                        </div>
+                        <div class="book-tags">
+                            <span class="book-tag">系统</span>
+                            <span class="book-tag">保命</span>
+                            <span class="book-tag">追妻火葬场</span>
+                        </div>
+                        <p class="book-desc">穿进一本虐文小说，原主因为嫉妒女主被男主折磨致死。为了活下去，我开启了疯狂作死模式，结果反而把男主逼疯了，最后只能抱着大腿求放过。</p>
+                        <div class="book-footer">
+                            <span class="author">完结</span>
+                            <button class="read-btn">立即阅读</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/book2/240/320" alt="小说封面" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="book-title">原主死后，全员悔疯了</h3>
+                        <div class="book-meta">
+                            <span>作者：甜心小糯米</span>
+                            <span>18.2万字</span>
+                        </div>
+                        <div class="book-tags">
+                            <span class="book-tag">穿越</span>
+                            <span class="book-tag">全员火葬场</span>
+                            <span class="book-tag">HE</span>
+                        </div>
+                        <p class="book-desc">上一世，我作为恶毒女配下场凄惨。这一世，我决定不再争抢，安心当个路人甲。谁知道，曾经高高在上的男主们却开始对我死缠烂打。</p>
+                        <div class="book-footer">
+                            <span class="author">连载中</span>
+                            <button class="read-btn">立即阅读</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/book3/240/320" alt="小说封面" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="book-title">虐文男主他心碎了</h3>
+                        <div class="book-meta">
+                            <span>作者：冷面书生</span>
+                            <span>32.0万字</span>
+                        </div>
+                        <div class="book-tags">
+                            <span class="book-tag">黑化</span>
+                            <span class="book-tag">病娇</span>
+                            <span class="book-tag">强制爱</span>
+                        </div>
+                        <p class="book-desc">为了摆脱虐文剧本，我试图攻略那个注定黑化的反派。结果攻略还没开始，反派就已经对我欲罢不能。这真的是我想要的剧情吗？</p>
+                        <div class="book-footer">
+                            <span class="author">完结</span>
+                            <button class="read-btn">立即阅读</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 4 -->
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/book4/240/320" alt="小说封面" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="book-title">我在虐文世界当咸鱼</h3>
+                        <div class="book-meta">
+                            <span>作者：懒猫趴趴</span>
+                            <span>12.8万字</span>
+                        </div>
+                        <div class="book-tags">
+                            <span class="book-tag">沙雕</span>
+                            <span class="book-tag">轻松</span>
+                            <span class="book-tag">系统</span>
+                        </div>
+                        <p class="book-desc">系统告诉我，只要我死，就能回家。为了回家，我拼了命地作死，结果剧情因为我的存在彻底崩坏，变成了一部搞笑喜剧。</p>
+                        <div class="book-footer">
+                            <span class="author">完结</span>
+                            <button class="read-btn">立即阅读</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 5 -->
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/book5/240/320" alt="小说封面" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="book-title">女配的自我修养</h3>
+                        <div class="book-meta">
+                            <span>作者：墨染青衣</span>
+                            <span>45.6万字</span>
+                        </div>
+                        <div class="book-tags">
+                            <span class="book-tag">大女主</span>
+                            <span class="book-tag">爽文</span>
+                            <span class="book-tag">事业</span>
+                        </div>
+                        <p class="book-desc">不谈恋爱，专心搞事业。在这个虐文世界里，我只想利用系统技能走上人生巅峰，顺便把那些曾经看不起我的人踩在脚下。</p>
+                        <div class="book-footer">
+                            <span class="author">完结</span>
+                            <button class="read-btn">立即阅读</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 6 -->
+                <article class="book-card">
+                    <img src="https://picsum.photos/seed/book6/240/320" alt="小说封面" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="book-title">穿书之我在绝望中重生</h3>
+                        <div class="book-meta">
+                            <span>作者：夜雨闻铃</span>
+                            <span>28.9万字</span>
+                        </div>
+                        <div class="book-tags">
+                            <span class="book-tag">重生</span>
+                            <span class="book-tag">复仇</span>
+                            <span class="book-tag">虐恋</span>
+                        </div>
+                        <p class="book-desc">前世被至亲背叛，被爱人推下悬崖。再次睁眼，回到了一切悲剧的开始。这一次，我绝不给他们任何机会。</p>
+                        <div class="book-footer">
+                            <span class="author">连载中</span>
+                            <button class="read-btn">立即阅读</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Guide Section -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="section-title">
+                阅读指南
+                <span>如何正确打开虐文女配剧本</span>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">📖</div>
+                    <h3>理解剧情逻辑</h3>
+                    <p>虐文女配通常面临复杂的情感纠葛和宿命论。阅读时请关注主角如何利用信息差，打破原书的悲剧走向。</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon">🛡️</div>
+                    <h3>关注保命攻略</h3>
+                    <p>本站精选的书籍重点在于“生存”。学习主角如何规避死亡flag，如何应对黑化男主的试探与威胁。</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon">✨</div>
+                    <h3>享受逆袭爽感</h3>
+                    <p>从被压迫到反客为主，体验女配华丽转身的过程。每一次反抗都是对宿命的宣战，也是对自我的救赎。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                常见问题
+                <span>关于虐文女配阅读的解答</span>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">Q：为什么有些书结局是BE？</div>
+                    <div class="faq-answer">A：虐文类型丰富，部分作品旨在探讨人性的复杂与宿命的无奈。BE并不代表失败，往往蕴含更深层的情感张力。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q：系统文和穿越文有什么区别？</div>
+                    <div class="faq-answer">A：系统文通常带有“任务”或“惩罚”机制，主角为了完成任务必须改变剧情；穿越文则侧重于主角如何适应新环境并利用原主的记忆。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q：如何找到我喜欢的虐文类型？</div>
+                    <div class="faq-answer">A：您可以使用顶部的筛选栏，按“甜宠”、“黑化”、“沙雕”等标签进行分类浏览，快速定位符合口味的作品。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4>虐文女配不想死</h4>
+                    <p>专注于高质量穿书虐文推荐，为读者提供沉浸式的阅读体验。</p>
+                    <p>我们致力于挖掘那些在绝望中寻找希望，在黑暗中寻找光明的精彩故事。</p>
+                </div>
+                <div class="footer-links">
+                    <h5>快速导航</h5>
+                    <ul>
+                        <li><a href="#">热门榜单</a></li>
+                        <li><a href="#">最新更新</a></li>
+                        <li><a href="#">作者专区</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>阅读分类</h5>
+                    <ul>
+                        <li><a href="#">系统攻略</a></li>
+                        <li><a href="#">黑化男主</a></li>
+                        <li><a href="#">全员火葬场</a></li>
+                        <li><a href="#">沙雕逆袭</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>联系我们</h5>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 虐文女配不想死阅读网 版权所有. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Simple Filter Logic (Visual only)
+        document.querySelectorAll('.filter-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.filter-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        // Read Button Interaction
+        document.querySelectorAll('.read-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const title = this.closest('.book-card').querySelector('.book-title').innerText;
+                alert('正在跳转至：《' + title + '》阅读页面...');
+            });
+        });
+    </script>
+</body>
+      </html>
